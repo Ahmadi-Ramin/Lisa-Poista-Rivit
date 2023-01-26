@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th id="ikä" colspan="1">Otsikko 1</th>
+                <th id="nimi" colspan="1">Otsikko 2</th>
+                <th id="pituus" colspan="1">Otsikko 3</th>
+            </tr>
+        </thead>
+        <tbody id="taulukko">
+            <tr>
+                <td id="omaIkä">Solu 1</td>
+                <td id="omaNimi">Solu 2</td>
+                <td id="omaPituus">Solu 3</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <button type="button" onclick="lisaaRivi()">Lisää rivi</button>
+    <br>
+    <button type="button" onclick="poistaaRiv()">Pistaa rivi</button>
+    <br>
+    <button type="button" onclick="muutaNimet()">muutetaan otsikon nimet ja lisätään oman tiedot </button>
+
+
+
+
+    <script>
+        // ----------------------lisaaRivi------------------------------------
+
+
+        function lisaaRivi() {
+            var taulu = document.getElementById("taulukko");
+            var rivi = taulu.insertRow(0);
+            var solu1 = rivi.insertCell(0);
+            var solu2 = rivi.insertCell(1);
+            var solu3 = rivi.insertCell(2);
+            solu1.innerHTML = "23";
+            solu1.style.fontSize = "20px"
+            solu2.innerHTML = "Ramin";
+            solu2.style.fontSize = "20px"
+            solu3.innerHTML = "164";
+            solu3.style.fontSize = "20px"
+        }
+        // ----------------------poistaaRiv------------------------------------
+
+
+        function poistaaRiv() {
+            document.getElementById("taulukko").deleteRow(0);
+
+
+            // ----------------------muutaOtsiskot------------------------------------
+
+
+        }
+        function muutaNimet() {
+            var ikä = document.getElementById("ikä");
+            ikä.innerHTML = "ikä";
+            ikä.style.color = "aqua";
+            ikä.style.backgroundColor = "tomato";
+            ikä.style.fontSize = "20px"
+            var nimi = document.getElementById("nimi");
+            nimi.innerHTML = "nimi";
+            nimi.style.color = "aqua";
+            nimi.style.backgroundColor = "tomato"
+            ikä.style.fontSize = "20px"
+            var pituus = document.getElementById("pituus");
+            pituus.innerHTML = "pituus";
+            pituus.style.color = "aqua";
+            pituus.style.backgroundColor = "tomato"
+            pituus.style.fontSize = "20px"
+
+            var oIkä = document.getElementById("omaIkä");
+            oIkä.innerHTML = "23";
+            oIkä.style.fontSize = "20px"
+            var oNimi = document.getElementById("omaNimi");
+            oNimi.innerHTML = "Ramin";
+            oNimi.style.fontSize = "20px"
+            var oPituus = document.getElementById("omaPituus");
+            oPituus.innerHTML = "176"
+            oPituus.style.fontSize = "20px"
+        }
+    </script>
+</body>
+
+</html>
